@@ -77,13 +77,14 @@ public class NUM7964 {
             int position = 0;
 
             StringTokenizer st = new StringTokenizer(bf.readLine());
+            StringTokenizer st1 = new StringTokenizer(bf.readLine());
 
             N = Integer.parseInt(st.nextToken());
             moveLimit = Integer.parseInt(st.nextToken());
 
             city = new int[N];
             for (int i = 0; i < N; i++) {
-                city[i] = Integer.parseInt(st.nextToken());
+                city[i] = Integer.parseInt(st1.nextToken());
             }
 
             if(city[0] == 0) {
