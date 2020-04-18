@@ -2,7 +2,7 @@ package SW_algorithm;
 
 /*
 
-SW Expert NO.6959 이상한 나라의 덧셈게임ㄴ
+SW Expert NO.6959 이상한 나라의 덧셈게임
 
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWjlH0k63joDFAVT
 
