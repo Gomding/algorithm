@@ -55,9 +55,6 @@ public class Kakao2020_4 {
             }
 
 
-
-
-
         }
 
     }
