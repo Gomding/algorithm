@@ -4,7 +4,7 @@ package SW_algorithm;
 
 DP 다이나믹 프로그래밍
 
-백준 2579 - 계단 오르기
+백준 1932 - 정수 삼각형
 
 https://www.acmicpc.net/problem/1932
 
