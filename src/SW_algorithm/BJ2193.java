@@ -4,7 +4,7 @@ package SW_algorithm;
 
 DP 다이나믹 프로그래밍
 
-백준 2193 - 이친
+백준 2193 - 이친수
 
 https://www.acmicpc.net/problem/2193
 
