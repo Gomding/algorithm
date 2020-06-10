@@ -46,13 +46,14 @@ import java.util.StringTokenizer;
 import java.math.BigInteger;
 
 public class NUM3260
+
 {
+
     public static void main(String args[]) throws Exception
     {
 
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int T;
-        T=Integer.parseInt(bf.readLine());
+        int T = Integer.parseInt(bf.readLine());
         BigInteger N;
         BigInteger M;
 
@@ -65,6 +66,9 @@ public class NUM3260
             M = new BigInteger(st.nextToken());
 
             System.out.println("#" + test_case + " " + N.add(M));
+
         }
+
     }
+
 }
