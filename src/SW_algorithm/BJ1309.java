@@ -47,7 +47,7 @@ public class BJ1309 {
         dp[1] = 3;
 
         for (int i = 2; i <= N; i++) {
-            dp[i] = dp[i - 1] * 2 + dp[i - 2];
+            dp[i] = (dp[i - 1] * 2 + dp[i - 2]) % 9901;
         }
 
         System.out.println(dp[N]);
