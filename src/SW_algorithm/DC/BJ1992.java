@@ -50,6 +50,8 @@ public class BJ1992 {
         boolean b = map[startY][startX];
         boolean chk = true;
 
+
+
         for (int i = startY; i < startY + N; i++) {
             for (int j = startX; j < startX + N; j++) {
                 if(map[i][j] != b) {
@@ -79,6 +81,9 @@ public class BJ1992 {
     }
 
     public static void main(String[] args) throws IOException {
+
+        System.out.println(-1 + "");
+
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
