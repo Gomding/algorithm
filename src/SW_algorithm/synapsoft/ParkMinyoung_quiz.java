@@ -5,17 +5,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Test1 {
+public class ParkMinyoung_quiz {
 
-    static boolean[][] ladder;
+    static int[][] ladder;
 
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
         String cmd;
 
-        ladder = new boolean[12][7];
+        ladder = new int[12][7];
 
         System.out.println("사다리 정보를 입력하세요(x는 입력 완료).");
 
@@ -42,15 +41,7 @@ public class Test1 {
                 break;
             }
 
-            int start = Integer.parseInt(cmd);
-
-            if (start > 0 && start <=6){
-                ladderGame(cmd);
-            }else {
-                System.out.println("1이상 6이하의 숫자를 입력해주세요");
-            }
-
-
+            ladderGame(cmd);
 
         }
 
@@ -71,33 +62,42 @@ public class Test1 {
                 throw new RuntimeException();
             }
 
-            ladder[y][x] = true;
-            ladder[y][x + 1] = true;
+            ladder[y][x] = x + 1;
+            ladder[y][x + 1] = x;
 
         } catch (NumberFormatException e) {
             System.out.println("입력 실패!사다리 정보는 다음과 같이 입력하세요.ex)> 1 6");
         } catch (RuntimeException e) {
-            System.out.println("입력 실패! 첫번째 값은 1이상 10이하 두번째 값은 1이상 6이하로 입력해주세요.");
+            System.out.println("입력 실패! 첫번째 값은 1이상 10이하 두번째 값은 1이상 6이하로 입력해주세요. ex)> 1 2");
         }
 
     }
 
     static void ladderGame(String cmd) {
 
-        int x = Integer.parseInt(cmd);
-        int y = 0;
+        try {
 
-        while (y != 11) {
+            int start = Integer.parseInt(cmd);
 
-            if (ladder[y][x]) {
-                x = x < 6 ? (ladder[y][x + 1] ? x + 1 : x - 1) : x - 1;
+            if (start > 0 && start <= 6) {
+                int x = start;
+                int y = 0;
+
+                while (y != 11) {
+
+                    if (ladder[y][x] > 0) {
+                        x = ladder[y][x];
+                    }
+                    y++;
+                }
+
+                System.out.println(x);
+            } else {
+                System.out.println("1이상 6이하의 숫자를 입력해주세요");
             }
-            y++;
+        } catch (NumberFormatException e) {
+            System.out.println("입력 실패! 1에서 6사이의 정수를 입력해주세요.");
         }
-
-        System.out.println(x);
-
     }
-
 
 }
