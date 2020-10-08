@@ -78,18 +78,6 @@ public class kakao_sort1 {
         sb.append(answer1[answer2_size - 1]);
         sb.append("]");
 
-        int num0 = (int)'0';
-        int num9 = (int)'9';
-
-        int A = (int)'A';
-        int Z = (int)'Z';
-        int a = (int)'a';
-        int z = (int)'z';
-
-        System.out.println("0 = " + num0 + ", " + "9 = " + num9);
-        System.out.println("A = " + A + ", " + "Z = " + Z);
-        System.out.println("a = " + a + ", " + "z = " + z);
-
         System.out.println(sb);
 
     }
